@@ -1,0 +1,17 @@
+@import "~/.config/swaync/colors-waybar.css";
+
+@define-color text            @foreground;
+@define-color background-alt  alpha(@color13, 1);
+@define-color selected        @color5;
+@define-color hover           alpha(@color15, .4);
+@define-color urgent          @color15;
+
+@import "themes/nova-dark/notifications.css";
+@import "themes/nova-dark/central_control.css";
+
+* {
+    all: unset;
+    font-size: 14px;
+    font-family: "JetBrains Mono Nerd Font 10";
+    transition: 200ms;
+}
