@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+sh -c 'XAPP_FORCE_GTKWINDOW_ICON="weather-clear" firefox --class WebApp-Weather5787 --name WebApp-Weather5787 --profile /home/doctor/.local/share/ice/firefox/Weather5787 --no-remote "https://wttr.in/Windsor On"'

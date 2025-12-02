@@ -1,0 +1,90 @@
+/* General Bar Style */
+#waybar {
+background: rgba(30, 30, 46, 0.6); /* Dark background with transparency */
+color: #cdd6f4;                    /* Light text color (Catppuccin-style) */
+font-family: 'JetBrainsMono Nerd Font', monospace;
+font-size: 13px;
+border-radius: 2px 10px 2px 10px;               /* Global rounded corners */
+}
+
+/* Base Module Style - Apply to everything on the right */
+.modules-right > widget > * {
+    padding: 0 10px;
+    margin-right: 5px;
+    background: #45475a; /* Slightly lighter background for modules */
+    border-radius: 25px;
+}
+
+/* Hyprland Workspaces (Left) */
+#workspaces button {
+padding: 0 2px;
+color: #bac2de;
+background: transparent;
+border-radius: 2px 10px 2px 10px;
+}
+
+/* Active Workspace Styling */
+#workspaces button.active {
+color: #eff1f3; /* Blue highlight for active workspace */
+background: #0310f7;
+font-weight: bold;
+border-bottom: 0px solid #89b4fa;
+}
+
+/* Specific Module Styling */
+#clock {
+background: #2a6ab3; 
+color: #1e1e2e;
+font-weight: bold;
+border-radius: 12px;
+}
+
+
+/* ----------------------------------------------------------------- */
+/* 1. TOOLTIP CONTAINER (for rounded corners and background) */
+/* ----------------------------------------------------------------- */
+
+/* ----------------------------------------------------------------- */
+/* TOOLTIP CONTAINER: Make sure the box itself is generous */
+/* ----------------------------------------------------------------- */
+#tooltip {
+padding: 20px;
+border-radius: 25px;
+background-color: rgba(30, 30, 46, 0.95);
+border: 2px solid #89b4fa;
+}
+
+#tooltip label {
+/* Set the base font size for all text in the calendar */
+font-size: 11px;
+color: #cdd6f4;
+}
+
+/* ----------------------------------------------------------------- */
+/* CALENDAR ELEMENTS: Space out the months and the days */
+/* ----------------------------------------------------------------- */
+
+/* Target the container for each individual month */
+/* Target the container for each individual month */
+#tooltip .calendar.year > box {
+/* Large margin to push months away from each other */
+margin: 15px;
+/* Padding is the space between the month border and its contents */
+padding: 10px 8px;
+
+border: 1px solid #45475a;
+border-radius: 25px;
+}
+
+/* Target the individual day buttons for minimum internal margin/padding */
+#tooltip button {
+/* Aggressive reduction to remove space around the day number */
+margin: 1px;
+padding: 1px;
+font-size: 11px; /* Ensure day numbers match base size */
+}
+
+/* Target the weekdays label to align with the smaller buttons */
+#tooltip .calendar .weekdays {
+margin-bottom: 2px;
+}
