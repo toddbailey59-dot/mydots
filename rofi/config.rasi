@@ -1,0 +1,196 @@
+/**
+ * Base16 oomox-0018 Round Suru ROFI Color theme
+ *
+ * Authors
+ *  Scheme: 0018 Round Suru 02GMS Poetician Edition (https://gitlab.com/Poetician/rofi)
+ *  Template: Jordi Pakey-Rodriguez (https://github.com/0xdec), Andrea Scarpino (https://github.com/ilpianista)
+ */
+configuration {               
+modes: "window,run,ssh,drun";
+font: "JetBrains Mono Nerd 12";
+/*location: 0;*/
+/*yoffset: 0;*/
+/*xoffset: 0;*/
+/*fixed-num-lines: true;*/
+/*... cut ...*/
+/*ml-row-down: "ScrollDown";*/ 
+    hover-select: true;                                                                                      
+    me-select-entry: "";
+    me-accept-entry: "MousePrimary";
+    me-accept-custom: "MouseMiddle";                                                                               
+}
+* {
+    clear:                       #00000000;
+    select:                      #b9a4794d;
+    red:                         #c39b55;
+    blue:                        #6c676180;
+    lightfg:                     #b9a479;
+    lightbg:                     #443f394d;
+    foreground:                  #b9a479;
+    background:                  #1f262cb3;
+    background-color:            #443f3933;
+    separator-color:              @foreground;
+    border-color:                @foreground;
+    selected-normal-foreground:  @background;
+    selected-normal-background:  @lightfg;
+    selected-active-foreground:  @background;
+    selected-active-background:  @blue;
+    selected-urgent-foreground:  @background;
+    selected-urgent-background:  @red;
+    normal-foreground:           @foreground;
+    normal-background:           @background;
+    active-foreground:           @blue;
+    active-background:           @background;
+    urgent-foreground:           @red;
+    urgent-background:           @background;
+    alternate-normal-foreground: @foreground;
+    alternate-normal-background: @lightbg;
+    alternate-active-foreground: @blue;
+    alternate-active-background: @lightbg;
+    alternate-urgent-foreground: @red;
+    alternate-urgent-background: @lightbg;
+    spacing:                     2;
+}
+window {
+    anchor:           north ;
+    location:         north ;
+    width:            70% ;
+    background-color: @background;
+    border:           6 3 4 3 ;
+    border-radius:    12px ;
+    padding:          4 ;
+    x-offset:         -40 ;
+    y-offset:         140 ;
+}
+mainbox {
+    border:           5 2 3 2 ;
+    border-radius:    10 ;
+    margin:           8 ;
+    padding:          10 ;
+}
+message {
+    border:           5px 2px 3px 2px ;
+    border-color:     @separator-color;
+    border-radius:    10% ;
+    margin:           8 100 ;
+    padding:          5px ;
+}
+textbox {
+    border:           4px 2px 3px 2px ;
+    border-color:     @separator-color;
+    border-radius:    10% ;
+    margin:           0 ;
+    padding:          5px ;
+    text-color:       @foreground;
+}
+element-icon {
+    size:             2.8em ;
+}
+element {
+    orientation:      horizontal;
+}
+element-text {
+    vertical-align:   0.450;
+    text-color:       inherit;
+}
+listview {
+    columns:          6;
+    lines:            7;
+    border:           5px 2px 3px 2px ;
+    border-color:     @separator-color;
+    border-radius:    10px;
+    spacing:          2px ;
+    scrollbar:        true;
+    padding:          4px 3px 6px ;
+}
+element {
+    children: [element-icon, element-text];    background-image: linear-gradient(to right, white/25%, grey/50%, black/85%);
+    border:           5 2 3 2 ;
+    border-color:     @background;
+    border-radius:    15 ;
+    padding:          6px ;
+}
+element normal.normal {
+    background-color: @normal-background;
+    text-color:       @normal-foreground;
+}
+element normal.urgent {
+    background-color: @urgent-background;
+    text-color:       @urgent-foreground;
+}
+element normal.active {
+    background-color: @active-background;
+    text-color:       @active-foreground;
+}
+element selected.normal {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+element selected.urgent {
+    background-color: @selected-urgent-background;
+    text-color:       @selected-urgent-foreground;
+}
+element selected.active {
+    background-color: @selected-active-background;
+    text-color:       @selected-active-foreground;
+}
+element alternate.normal {
+    background-color: @alternate-normal-background;
+    text-color:       @alternate-normal-foreground;
+}
+element alternate.urgent {
+    background-color: @alternate-urgent-background;
+    text-color:       @alternate-urgent-foreground;
+}
+element alternate.active {
+    background-color: @alternate-active-background;
+    text-color:       @alternate-active-foreground;
+}
+mode-switcher {
+    border:           4px 2px 3px 2px ;
+    border-color:     @separator-color;
+    border-radius:    10% ;
+    margin:           8 100 0 ;
+    padding:          5px ;
+}
+button {
+    spacing:          0;
+    text-color:       @normal-foreground;
+}
+button selected {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+inputbar {
+    background-color: @clear;
+    border:           4px 2px 3px 2px ;
+    border-color:     @separator-color;
+    border-radius:    10% ;
+    margin:           8 100 0 ;
+    padding:          6px 12px 6px 8px ;
+    spacing:          0px;
+    text-color:       @normal-foreground;
+    children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];
+}
+case-indicator {
+    spacing:          0;
+    text-color:       @normal-foreground;
+    background-color: @clear;
+}
+entry {
+    spacing:          0;
+    text-color:       @normal-foreground;
+    background-color: @clear;
+}
+prompt {
+    spacing:          0;
+    text-color:       @normal-foreground;
+    background-color: @clear;
+}
+textbox-prompt-colon {
+    expand:           false;
+    str:              ":";
+    margin:           0px 0.3000em 0.0000em 0.0000em ;
+    text-color:       inherit;
+    background-color: @clear;
+}

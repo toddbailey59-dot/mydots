@@ -1,0 +1,85 @@
+/******************************************************************************
+* ROFI Color theme
+* User: Sheldonimo
+* Copyright: Juan Alfaro
+******************************************************************************/
+
+* {
+  background-color: rgba(46, 52, 64, 0.20);
+  bg-alt: hsla(222,0.163, 0.4, 0.50);
+  fg: #ECEFF4;
+  nord-blue-light: #88C0D0;
+  nord-yellow: #A8D7FE;
+  border: 0;
+  lines: 13;
+  padding: 0;
+  margin: 0;
+  spacing: 0;
+}
+
+window {
+  background-image: url("/home/doctor/.config/rofi/images/tardis2-.jpg");
+  width: 75%;
+  border-color: transparent;
+  border: 25px;
+  transparency: "real";
+  border-radius: 25px;
+}
+
+mainbox {
+  children: [ inputbar, listview ];
+}
+
+listview {
+  columns:                    8;
+  lines:                       14;
+  border-radius: 25px;
+}
+
+element {
+  padding: 10;
+  children: [element-icon, element-text];
+  orientation: horizontal;
+  text-color: @fg;
+  border-radius: 25px;
+}
+
+element-text {
+    background-color: inherit;
+    text-color: @fg;
+    padding: 5 0;
+}
+
+element-text selected {
+  text-color: @nord-blue-light;
+}
+
+element selected {
+  background-color: @bg-alt;
+}
+
+element-icon {
+  size: 33px;
+  background-color: inherit;
+}
+
+element-icon selected {
+  background-color: @bg-alt;
+}
+
+inputbar {
+  background-color: @background;
+  children: [prompt, entry];
+}
+
+prompt {
+  enabled: true;
+  font: "Hack Nerd Font Regular 12";
+  padding: 12 0 0 12;
+  text-color: @nord-yellow;
+}
+
+entry {
+  padding: 12;
+  text-color: @nord-yellow;
+}

@@ -1,0 +1,168 @@
+/**
+ * User: Rasi
+ * Copyright: Rasmus Steinke
+ */
+configuration {
+ modi: "window,drun,ssh,combi";
+ font: "Jetbrains Mono Nerd 10";
+ combi-modi: "window,drun,ssh";
+ me-select-entry: "MousePrimary";                                                                                  
+ me-accept-entry: "!MousePrimary";                                                                                
+ me-accept-custom: "Control+MouseDPrimary";
+ }
+/* global settings and color variables */
+* {
+    blue:        #A7c6E2;
+    blue-trans:  #A7c6e2aa;
+    darkblue:    #005F87;
+    white:       #FFFFFF;
+    green:       #168beb88;
+    black:       #000000;
+    grey:        #444444;
+    orange:      #8113e9ff;
+    dark-orange: #FFA664;
+    light-grey:  #151a2eff;
+    medium-grey: #08ebb2ff;
+    dark-grey:   #125f72ff;
+    urgent:      #D75F00;
+    active:      #005F87;
+    transparent: #000000aa;
+    spacing: 0em;
+    font: "Iosevka Term Regular 14";
+    padding: 0px;
+    background-color: @white;
+    line-style: "none";
+}
+
+prompt-box {
+	background-color: transparent;
+}
+
+prompt {
+	background-color: transparent;
+	text-color: @white;
+}
+
+window {
+    border-radius: 12px;
+    background-color: @transparent;
+    border: 2;
+    color: @grey;
+}
+mainbox {
+    padding: 0px;
+    background-color: @blue-trans;
+    color: @grey;
+    border: 2px;
+    spacing: 0%;
+}
+
+listview {
+    // Looks.
+    columns: 6;
+    rows: 6;
+    border-radius: 12px;
+    border: 2px 2px 2px 2px;
+    padding: 10px 10px 10px 10px;
+    margin: 20px 30px 30px 30px;
+    background-color: @orange;
+    // Enable scrollbar
+    scrollbar: false;
+    scrollbar-width: 5px;
+    fixed-height: true;
+    reverse: false;
+    color: #000000;
+    spacing: 0.3em;
+}
+scrollbar {
+    color: @black;
+    background-color: @blue;
+    padding: 1px;
+}
+element {
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+    color: @black;
+    background-color: @blue;
+}
+element normal.normal {
+    color: @black;
+    background-color: @orange;
+}
+element normal.urgent {
+    color: @urgent;
+    background-color: @light-grey;
+}
+element normal.active {
+    color: @active;
+    background-color: @light-grey;
+}
+element selected.normal {
+    border-radius: 12px;
+    color: @black;
+    background-color: @dark-orange;
+}
+element selected.urgent {
+    color: @light-grey;
+    background-color: @urgent;
+}
+element selected.active {
+    color: @light-grey;
+    background-color: @active;
+}
+element alternate.normal {
+    color: @black;
+    background-color: @orange;
+}
+element alternate.urgent {
+    color: @urgent;
+    background-color: @medium-grey;
+}
+element alternate.active {
+    color: @active;
+    background-color: @medium-grey;
+}
+inputbar {
+    spacing: 0;
+    background-color: #88003300;
+    border: 2px 2px 2px 2px;
+    border-radius: 12px;
+    padding: 5px 10px 5px 35px;
+    background-color: #29477588;
+    color: @black;
+    end: false;
+}
+
+separator {
+    background-color: @blue;
+    color: #00000000;
+}
+prompt normal.normal {
+    background-color: #00000000;
+    color: #ffffff;
+    padding: 0px;
+}
+entry normal.normal {
+    background-color: #00000000;
+    color: #ffffff;
+    padding: 0px;
+}
+case-indicator normal.normal {
+    background-color: #00000000;
+    color: #ffffff;
+    padding: 0px;
+}
+
+message {
+	margin: 30px 30px 30px 30px;
+	padding: 20px 30px 20px 20px;
+    padding:      1px ;
+    border-radius: 12px;
+    border: 2px 2px 2px 2px;
+}
+
+prompt-colon {
+    spacing:    0;
+    enabled: false;
+}
